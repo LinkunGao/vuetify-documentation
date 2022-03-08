@@ -104,3 +104,26 @@ See the origin file, (click this :download:`link <../../../todo-lesson02/src/plu
     :language: js
     :linenos:
 
+
+
+Padding & Margin
+-------------------
+
+Search **spacing** in the vuetify
+
+See: https://vuetifyjs.com/en/styles/spacing/
+
+the format **{property}{direction}-{size}**
+
+
+
+Grid system
+-------------
+
+See more: https://vuetifyjs.com/en/components/grids/
+
+
+
+.. literalinclude:: ../../../todo-lesson03/src/views/Dashboard.vue
+    :language: html
+    :linenos:
