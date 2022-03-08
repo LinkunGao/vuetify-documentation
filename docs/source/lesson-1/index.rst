@@ -25,5 +25,12 @@ We can use below commands to create vue vuetify project:
                 </v-app-bar>
             </v-app>
         </template>
+
     If we remove the app prop in v-app-bar, the title bar will not be fixed at the browser top line.
+    
     That also means app prop makes conponents fixed.
+
+    **However**, in current released vuetify version, the **app** prop is renamed to **absolute** prop.
+
+- A easy way to remember vuetify props is to see their office website.
+    See: https://vuetifyjs.com/en/components/toolbars/#usage
