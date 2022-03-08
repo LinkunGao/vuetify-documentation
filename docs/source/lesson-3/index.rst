@@ -14,7 +14,7 @@ Use v-for to easily create multiple tags
     :linenos:
 
     <template>
-        <v-navigation-drawer v-model="drawer" app class="primary">
+        <v-navigation-drawer v-model="drawer" app class="primary" temporary>
             <v-list>
                 <v-list-item
                 v-for="link in links"
