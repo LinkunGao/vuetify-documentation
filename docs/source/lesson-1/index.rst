@@ -1,4 +1,4 @@
-Lesson-1
+Lesson-01
 ==========
 
 We can use below commands to create vue vuetify project:
