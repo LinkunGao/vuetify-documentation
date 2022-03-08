@@ -36,7 +36,7 @@ the format to control responsive:
     hidden-{breakpoint}-{condition}
 
     breakpoint: xs, sm, md, lg, xl
-    
+
     condition: only, and-down, and up
 
 
@@ -86,3 +86,19 @@ See the origin file, (click this :download:`link <../../../todo-lesson02/src/com
 .. literalinclude:: ../../../todo-lesson02/src/components/Navbar.vue
     :language: html
     :linenos:
+
+
+Theme
+--------
+
+We can change the default theme in plugins vuetify.js
+
+See:
+    https://vuetifyjs.com/en/styles/colors/#javascript-color-pack
+
+See the origin file, (click this :download:`link <../../../todo-lesson02/src/plugins/vuetify.js>` to download a copy of this file)
+
+.. literalinclude:: ../../../todo-lesson02/src/plugins/vuetify.js
+    :language: js
+    :linenos:
+

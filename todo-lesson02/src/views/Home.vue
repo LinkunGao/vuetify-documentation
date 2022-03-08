@@ -26,7 +26,7 @@
 
     <!-- ***************** Visibility ***************** -->
     <div style="height: 50px">Visibility</div>
-    <v-btn class="hidden-sm-and-down">click me down</v-btn>
+    <v-btn class="hidden-sm-and-down" color="my_color">click me down</v-btn>
 
     <v-btn class="hidden-sm-and-up">click me up</v-btn>
     <v-btn class="hidden-sm-only">click me only</v-btn>
