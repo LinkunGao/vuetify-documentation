@@ -23,10 +23,13 @@
     <v-btn depressed small fab dark color="purple">
       <v-icon small>mdi-heart</v-icon>
     </v-btn>
-    <!-- <v-btn>
-      <span class="material-icons"> date_range </span>
-    </v-btn>
-    <span class="material-icons"> search </span> -->
+
+    <!-- ***************** Visibility ***************** -->
+    <div style="height: 50px">Visibility</div>
+    <v-btn class="hidden-sm-and-down">click me down</v-btn>
+
+    <v-btn class="hidden-sm-and-up">click me up</v-btn>
+    <v-btn class="hidden-sm-only">click me only</v-btn>
   </div>
 </template>
 
