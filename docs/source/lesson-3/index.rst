@@ -55,3 +55,44 @@ Use v-for to easily create multiple tags
     
 router
 -------
+
+There are two ways to import components in router.
+
+1. Use **import** in the beginning, to import the component at first.
+
+.. code-block:: bash
+    :linenos:
+
+    import Dashboard from "../views/Dashboard.vue";
+
+    const routes = [
+            {
+                path: "/",
+                name: "Dashboard",
+                component: Dashboard,
+            },
+        ];
+
+2. import the components inside route array directly.
+
+.. code-block:: bash
+    :linenos:
+
+    const routes = [
+            {
+                path: "/projects",
+                name: "Projects",
+                // route level code-splitting
+                // this generates a separate chunk (projects.[hash].js) for this route
+                // which is lazy-loaded when the route is visited.
+                component: () =>
+                import(/* webpackChunkName: "projects" */ "../views/Projects.vue"),
+            },
+        ];
+
+
+See the origin file, (click this :download:`link <../../../todo-lesson03/src/router/index.js>` to download a copy of this file)
+
+.. literalinclude:: ../../../todo-lesson02/src/router/index.js
+    :language: js
+    :linenos:
