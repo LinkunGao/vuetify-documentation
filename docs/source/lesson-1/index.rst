@@ -7,7 +7,8 @@ We can use below commands to create vue vuetify project:
     :linenos:
 
     $ vue create todo-lesson01
-    $ cd todo-ninja
+    $ cd todo-lesson01
+    $ npm i
     $ npm run serve
 
     // add vuetify

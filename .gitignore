@@ -10,6 +10,7 @@ yarn-error.log*
 docs/build/
 node_modules/
 todo-lesson01/node_modules/
+todo-lesson02/node_modules/
 
 # Runtime data
 pids

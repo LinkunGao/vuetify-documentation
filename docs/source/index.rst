@@ -11,6 +11,7 @@ Welcome to Vuetify's documentation!
    :caption: Contents:
 
    lesson-1/index
+   lesson-2/index
 
 Indices and tables
 ==================
