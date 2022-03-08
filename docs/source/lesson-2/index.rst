@@ -78,6 +78,8 @@ We can easily use v-spacer tag to achieve justify center css
 Navigation drawers
 --------------------
 
+Must add `temporary` attribute in v-navigation-drawer tag
+
 see:
 https://vuetifyjs.com/en/components/navigation-drawers/
 
