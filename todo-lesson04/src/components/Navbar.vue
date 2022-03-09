@@ -10,6 +10,33 @@
         <span>Skycoco</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
+
+      <!-- dropdown menu -->
+      <v-menu offset-y>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            color="gery lighten-3 grey--text"
+            class="mr-5"
+            depressed
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon left>mdi-chevron-down</v-icon>
+            <span>Menu</span>
+          </v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="link in links"
+            :key="link.text"
+            router
+            :to="link.route"
+          >
+            <v-list-item-title>{{ link.text }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+
       <v-btn depressed class="grey lighten-4 grey--text">
         <span>Sign Out</span>
         <v-icon right>mdi-exit-to-app</v-icon>
