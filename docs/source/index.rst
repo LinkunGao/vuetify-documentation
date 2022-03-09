@@ -13,6 +13,7 @@ Welcome to Vuetify's documentation!
    lesson-1/index
    lesson-2/index
    lesson-3/index
+   lesson-4/index
 
 Indices and tables
 ==================
