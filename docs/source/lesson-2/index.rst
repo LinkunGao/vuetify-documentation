@@ -193,3 +193,54 @@ See the origin file, (click this :download:`link <../../../todo-lesson04/src/vie
 .. literalinclude:: ../../../todo-lesson04/src/views/Projects.vue
     :language: html
     :linenos:
+
+
+Form
+-------
+We can use ``prepend-icon`` attribute to add icons in front of each field.
+
+.. code-block:: bash
+    :linenos:
+
+    <v-form class="px-3">
+        <v-text-field
+            label="Title"
+            v-model="title"
+            prepend-icon="mdi-folder"
+        ></v-text-field>
+        <v-textarea
+            label="Info"
+            v-model="content"
+            prepend-icon="mdi-pencil"
+        ></v-textarea>
+        <v-btn color="success" class="mr-4" @click="submit">
+            Add project
+        </v-btn>
+    </v-form>
+
+
+date-picker
+-------------
+
+To convert date format we need to install a new package.
+
+.. code-block:: bash
+    :linenos:
+
+    npm install date-fns
+
+
+The date-fns format documentation: https://date-fns.org/v2.28.0/docs/format
+
+We must to convert the string date to new Date(), the use format:
+
+.. code-block:: bash
+    :linenos:
+
+    format(new Date(2016, 0, 1), "yyyy-MM-dd'T'HH:mm:ss.SSSxxx")
+
+See the origin file, (click this :download:`link <../../../todo-lesson04/src/components/Popup.vue>` to download a copy of this file)
+
+.. literalinclude:: ../../../todo-lesson04/src/components/Popup.vue
+    :language: html
+    :linenos:
