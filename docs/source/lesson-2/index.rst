@@ -20,6 +20,10 @@ v-btn
     see more on this: https://vuetifyjs.com/en/components/icons/#semantic-svg-icons
 
 
+- To choice more icons see: https://materialdesignicons.com/
+    - just search on it, to use it in vuetify, simply add mdi- in the icon's name, such as mdi-account
+
+
 breakpoints
 ------------
 
@@ -122,8 +126,48 @@ Grid system
 
 See more: https://vuetifyjs.com/en/components/grids/
 
+- Issue with xs not working in vuetify
 
+Notice: **xs** is replaced by **cols**, it is no longer supported by vuetify.
 
 .. literalinclude:: ../../../todo-lesson03/src/views/Dashboard.vue
     :language: html
     :linenos:
+
+
+
+Chip
+-------
+
+see: https://vuetifyjs.com/en/components/chips/
+
+
+To address chips background color, we need add **!important** in the css.
+Also, if we want to make a tag move to right, we can use class="text-right"
+
+.. code-block:: bash
+    :linenos:
+
+    <div class="text-right">
+        <v-chip small :class="`${project.status} my-2`">
+            {{ project.status }}
+        </v-chip>
+    </div>
+
+    <style scoped lang="scss">
+
+        .v-chip.completed {
+            background-color: #3cd1c2 !important;
+        }
+        .v-chip.ongoing {
+            background: orange !important;
+        }
+        .v-chip.overdue {
+            background: tomato !important;
+        }
+    </style>
+
+Tooltips
+----------
+
+The v-tooltip component is useful for conveying information when a user hovers over an element. You can also programmatically control the display of tooltips through a v-model. When activated, tooltips display a text label identifying an element, such as a description of its function.
