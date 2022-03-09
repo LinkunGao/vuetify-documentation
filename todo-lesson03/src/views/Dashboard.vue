@@ -4,7 +4,7 @@
 
     <v-container class="my-5">
       <v-row>
-        <v-col md="6" sm="12">
+        <v-col cols="12" md="6" sm="12">
           <v-btn outlined block color="primary">1</v-btn>
         </v-col>
         <v-col md="2" sm="4">

@@ -121,8 +121,7 @@ Grid system
 -------------
 
 See more: https://vuetifyjs.com/en/components/grids/
-
-
+s** instead. 
 
 .. literalinclude:: ../../../todo-lesson03/src/views/Dashboard.vue
     :language: html
