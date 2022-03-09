@@ -130,6 +130,9 @@ See more: https://vuetifyjs.com/en/components/grids/
 
 Notice: **xs** is replaced by **cols**, it is no longer supported by vuetify.
 
+
+If we want to center an item, we can use <v-col class="mt-5 text-center">
+
 .. literalinclude:: ../../../todo-lesson03/src/views/Dashboard.vue
     :language: html
     :linenos:

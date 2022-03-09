@@ -17,6 +17,14 @@
     </v-toolbar>
 
     <v-navigation-drawer v-model="drawer" app class="primary" temporary>
+      <v-raw justify="center">
+        <v-col class="mt-5 text-center">
+          <v-avatar size="100">
+            <img src="/Bulbasaur.png" alt="" />
+          </v-avatar>
+          <p class="white--text subheading mt-1">Skycoco</p>
+        </v-col>
+      </v-raw>
       <v-list>
         <v-list-item
           v-for="link in links"
