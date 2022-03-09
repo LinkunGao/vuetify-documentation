@@ -12,13 +12,17 @@
           :key="person.name"
         >
           <v-card class="text-center ma-3">
-            <v-responsive class="pt-4"> image goes here </v-responsive>
+            <v-responsive class="pt-4">
+              <v-avatar size="100" class="gery lighten-2">
+                <img :src="person.avatar" />
+              </v-avatar>
+            </v-responsive>
             <v-card-text>
               <div class="subheading">{{ person.name }}</div>
               <div class="grey--text">{{ person.role }}</div>
             </v-card-text>
             <v-card-actions>
-              <v-btn dark color="grey" class="lighten-6">
+              <v-btn color="grey" class="lighten-4 grey--text">
                 <v-icon small left>mdi-message</v-icon>
                 <span>Message</span>
               </v-btn>
@@ -40,25 +44,31 @@ export default {
         {
           name: "The Net Ninja",
           role: "Web developer",
+          avatar: "Bulbasaur.png",
         },
         {
           name: "Skycoco",
           role: "Graphic designer",
+          avatar: "Charmander.png",
         },
         {
           name: "Jant",
           role: "web developer",
+          avatar: "Farfetch'd.png",
         },
         {
           name: "Bob",
           role: "web developer",
+          avatar: "Snorlax.png",
         },
         {
           name: "Ann",
           role: "Sales guru",
+          avatar: "Squirtle.png",
         },
       ],
     };
   },
+  methods: {},
 };
 </script>

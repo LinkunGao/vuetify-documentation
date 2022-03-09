@@ -130,6 +130,9 @@ See more: https://vuetifyjs.com/en/components/grids/
 
 Notice: **xs** is replaced by **cols**, it is no longer supported by vuetify.
 
+
+If we want to center an item, we can use <v-col class="mt-5 text-center">
+
 .. literalinclude:: ../../../todo-lesson03/src/views/Dashboard.vue
     :language: html
     :linenos:
@@ -171,3 +174,22 @@ Tooltips
 ----------
 
 The v-tooltip component is useful for conveying information when a user hovers over an element. You can also programmatically control the display of tooltips through a v-model. When activated, tooltips display a text label identifying an element, such as a description of its function.
+
+
+Avatars
+----------
+
+The v-avatar component is typically used to display circular user profile pictures. This component will allow you to dynamically size and add a border radius of responsive images, icons, and text. A tile variation is available for displaying an avatar without border radius.
+
+
+Is a circle.
+
+
+Expansion panel
+-------------------
+
+See the origin file, (click this :download:`link <../../../todo-lesson04/src/views/Projects.vue>` to download a copy of this file)
+
+.. literalinclude:: ../../../todo-lesson04/src/views/Projects.vue
+    :language: html
+    :linenos:
