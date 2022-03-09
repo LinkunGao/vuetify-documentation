@@ -51,6 +51,7 @@
           </v-avatar>
           <p class="white--text subheading mt-1">Skycoco</p>
         </v-col>
+        <v-col class="mt-5 text-center"> <Popup /> </v-col>
       </v-raw>
       <v-list>
         <v-list-item
@@ -74,7 +75,9 @@
 </template>
 
 <script>
+import Popup from "./Popup.vue";
 export default {
+  components: { Popup },
   data() {
     return {
       drawer: false,
