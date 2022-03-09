@@ -121,7 +121,9 @@ Grid system
 -------------
 
 See more: https://vuetifyjs.com/en/components/grids/
-s** instead. 
+
+- Issue with xs not working in vuetify
+Notice: **xs** is replaced by **cols**, it is no longer supported by vuetify.
 
 .. literalinclude:: ../../../todo-lesson03/src/views/Dashboard.vue
     :language: html
