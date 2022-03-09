@@ -183,3 +183,13 @@ The v-avatar component is typically used to display circular user profile pictur
 
 
 Is a circle.
+
+
+Expansion panel
+-------------------
+
+See the origin file, (click this :download:`link <../../../todo-lesson04/src/views/Projects.vue>` to download a copy of this file)
+
+.. literalinclude:: ../../../todo-lesson04/src/views/Projects.vue
+    :language: html
+    :linenos:

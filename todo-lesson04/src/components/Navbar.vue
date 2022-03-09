@@ -7,7 +7,7 @@
       ></v-app-bar-nav-icon>
       <v-toolbar-title class="text-uppercase grey--text">
         <span class="font-weight-light">Todo</span>
-        <span>Ninja</span>
+        <span>Skycoco</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn depressed class="grey lighten-4 grey--text">
@@ -16,7 +16,7 @@
       </v-btn>
     </v-toolbar>
 
-    <v-navigation-drawer v-model="drawer" app class="primary" temporary>
+    <v-navigation-drawer v-model="drawer" app color="primary" temporary>
       <v-raw justify="center">
         <v-col class="mt-5 text-center">
           <v-avatar size="100">
