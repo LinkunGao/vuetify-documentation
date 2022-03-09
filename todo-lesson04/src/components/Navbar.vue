@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <v-toolbar flat app>
+    <!-- <v-toolbar flat app> -->
+    <v-app-bar app>
       <v-app-bar-nav-icon
         class="grey--text"
         @click="drawer = !drawer"
@@ -41,10 +42,11 @@
         <span>Sign Out</span>
         <v-icon right>mdi-exit-to-app</v-icon>
       </v-btn>
-    </v-toolbar>
+      <!-- </v-toolbar> -->
+    </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" app color="primary" temporary>
-      <v-raw justify="center">
+      <v-row justify="center">
         <v-col class="mt-5 text-center">
           <v-avatar size="100">
             <img src="/Bulbasaur.png" alt="" />
@@ -52,7 +54,7 @@
           <p class="white--text subheading mt-1">Skycoco</p>
         </v-col>
         <v-col class="mt-5 text-center"> <Popup /> </v-col>
-      </v-raw>
+      </v-row>
       <v-list>
         <v-list-item
           v-for="link in links"
