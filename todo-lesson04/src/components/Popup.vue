@@ -19,6 +19,20 @@
             v-model="content"
             prepend-icon="mdi-pencil"
           ></v-textarea>
+
+          <v-menu max-width="290" offset-x>
+            <template v-slot:activator="{ on, attrs }">
+              <v-text-field
+                :value="formattedDate"
+                v-bind="attrs"
+                v-on="on"
+                label="Due date"
+                prepend-icon="mdi-calendar-month-outline"
+              ></v-text-field>
+            </template>
+            <v-date-picker v-model="due"></v-date-picker>
+          </v-menu>
+
           <v-btn color="success" class="mr-4" @click="submit">
             Add project
           </v-btn>
@@ -29,16 +43,23 @@
 </template>
 
 <script>
+import format from "date-fns/format";
 export default {
   data() {
     return {
       title: "",
       content: "",
+      due: null,
     };
   },
   methods: {
     submit() {
       console.log(this.title, this.content);
+    },
+  },
+  computed: {
+    formattedDate() {
+      return this.due ? format(new Date(this.due), "do MMM yyyy") : "";
     },
   },
 };
