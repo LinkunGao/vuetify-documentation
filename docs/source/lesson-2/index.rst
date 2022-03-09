@@ -20,6 +20,10 @@ v-btn
     see more on this: https://vuetifyjs.com/en/components/icons/#semantic-svg-icons
 
 
+- To choice more icons see: https://materialdesignicons.com/
+    - just search on it, to use it in vuetify, simply add mdi- in the icon's name, such as mdi-account
+
+
 breakpoints
 ------------
 
@@ -162,3 +166,8 @@ Also, if we want to make a tag move to right, we can use class="text-right"
             background: tomato !important;
         }
     </style>
+
+Tooltips
+----------
+
+The v-tooltip component is useful for conveying information when a user hovers over an element. You can also programmatically control the display of tooltips through a v-model. When activated, tooltips display a text label identifying an element, such as a description of its function.

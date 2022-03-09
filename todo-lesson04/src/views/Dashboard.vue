@@ -3,6 +3,45 @@
     <h1 class="subheading grey--text">Dashboard</h1>
 
     <v-container class="my-5">
+      <v-row class="mb-3 ml-10">
+        <v-tooltip top>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              small
+              dark
+              color="grey"
+              class="mr-2"
+              @click="sortBy('title')"
+              v-bind="attrs"
+              v-on="on"
+            >
+              <v-icon left small>mdi-folder</v-icon>
+              <span class="caption text-lowercase">By project name</span>
+            </v-btn>
+          </template>
+          <span class="caption text-lowercase"
+            >sort project by project name</span
+          >
+        </v-tooltip>
+        <v-tooltip top>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              small
+              dark
+              color="grey"
+              class="mr-2"
+              @click="sortBy('person')"
+              v-on="on"
+              v-bind="attrs"
+            >
+              <v-icon left small>mdi-account</v-icon>
+              <span class="caption text-lowercase">By person</span>
+            </v-btn>
+          </template>
+          <span class="caption text-lowercase">sort project by person</span>
+        </v-tooltip>
+      </v-row>
+
       <v-card flat v-for="project in projects" :key="project.title">
         <v-row :class="`ma-1 pa-2 project ${project.status}`">
           <v-col cols="12" sm="12" md="6">
@@ -72,6 +111,11 @@ export default {
       ],
     };
   },
+  methods: {
+    sortBy(prop) {
+      this.projects.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
+    },
+  },
 };
 </script>
 
@@ -95,4 +139,7 @@ export default {
 .v-chip.overdue {
   background: tomato !important;
 }
+// .v-btn {
+//   text-transform: lowercase;
+// }
 </style>

@@ -161,3 +161,9 @@ See the origin file, (click this :download:`link <../../../todo-lesson04/src/vie
 .. literalinclude:: ../../../todo-lesson04/src/views/Dashboard.vue
     :language: html
     :linenos:
+
+v-slot, v-on
+----------------
+
+see: https://blog.csdn.net/weixin_44710964/article/details/107428727
+vue: https://staging-cn.vuejs.org/guide/components/slots.html#slot-content-and-outlet
