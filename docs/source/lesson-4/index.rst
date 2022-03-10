@@ -161,7 +161,23 @@ https://firebase.google.com/docs/firestore/quickstart
 ``Notice``: the projects here is the collection in firebase
 
 
+- listen docs
 
+.. code-block:: bash
+    :linenos:
 
+    // signle
+    onSnapshot(doc_aaa, (docSnapshot) => {
+        if (docSnapshot.exists()) {
+            console.log(docSnapshot.data());
+        }
+    });
 
+    // multiple
+    const all = query(collection(db, "projects"));
+
+    onSnapshot(all, (docSnapshot) => {
+    // console.log(JSON.stringify(docSnapshot.docs.map((e) => e.data())));
+    docSnapshot.docs.map((e) => console.log(e.data()));
+    });
 

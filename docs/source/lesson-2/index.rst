@@ -244,3 +244,9 @@ See the origin file, (click this :download:`link <../../../todo-lesson04/src/com
 .. literalinclude:: ../../../todo-lesson04/src/components/Popup.vue
     :language: html
     :linenos:
+
+Snackbar
+-----------
+
+see here:
+https://vuetifyjs.com/en/components/snackbars/#usage

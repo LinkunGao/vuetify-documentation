@@ -15,6 +15,18 @@ Welcome to Vuetify's documentation!
    lesson-3/index
    lesson-4/index
 
+
+Special Thanks to The Net Ninja:
+
+https://github.com/iamshaunjp/vuetify-playlist
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 2.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/2uZYKcKHgU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
 Indices and tables
 ==================
 

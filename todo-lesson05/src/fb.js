@@ -8,6 +8,7 @@ import {
   query,
   getDoc,
   getDocs,
+  onSnapshot,
 } from "firebase/firestore";
 // import { collection, addDoc } from "firebase/firestore";
 
@@ -61,5 +62,17 @@ const db = getFirestore();
 //     console.log(doc.data());
 //   });
 // });
+// const all = query(collection(db, "projects"));
 
-export { doc, db, setDoc, collection, query, getDocs, getDoc };
+// onSnapshot(all, (docSnapshot) => {
+//   // console.log(JSON.stringify(docSnapshot.docs.map((e) => e.data())));
+//   docSnapshot.docs.map((e) => console.log(e.data()));
+// });
+
+// onSnapshot(doc_aaa, (docSnapshot) => {
+//   if (docSnapshot.exists()) {
+//     console.log(docSnapshot.data());
+//   }
+// });
+
+export { doc, db, setDoc, collection, query, getDocs, getDoc, onSnapshot };

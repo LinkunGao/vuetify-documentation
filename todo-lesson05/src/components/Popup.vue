@@ -1,5 +1,5 @@
 <template>
-  <v-dialog max-width="600px">
+  <v-dialog max-width="600px" v-model="dialog">
     <template v-slot:activator="{ on, attrs }">
       <v-btn color="info" v-bind="attrs" v-on="on"> Add new project </v-btn>
     </template>
@@ -36,7 +36,12 @@
             <v-date-picker v-model="due"></v-date-picker>
           </v-menu>
           <v-spacer></v-spacer>
-          <v-btn color="success" class="mr-4" @click="submit">
+          <v-btn
+            color="success"
+            class="mr-4"
+            @click="submit"
+            :loading="loading"
+          >
             Add project
           </v-btn>
         </v-form>
@@ -48,6 +53,7 @@
 <script>
 import format from "date-fns/format";
 import * as fb_db from "@/fb";
+import Bus from "../bus";
 export default {
   data() {
     return {
@@ -55,11 +61,14 @@ export default {
       content: "",
       due: null,
       inputRules: [(v) => v.length >= 3 || "Minimum length is 3 characters"],
+      loading: false,
+      dialog: false,
     };
   },
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
+        this.loading = true;
         const project = {
           title: this.title,
           content: this.content,
@@ -68,9 +77,13 @@ export default {
           status: "ongoing",
         };
         const db = fb_db.db;
-        const new_doc = fb_db.doc(db, "projects/aaa");
-        fb_db.setDoc(new_doc, project, { merge: true }).then((res) => {
+        const new_doc = fb_db.doc(db, "projects/" + this.title);
+        fb_db.setDoc(new_doc, project, { merge: true }).then(() => {
           console.log("successful");
+          this.loading = false;
+          this.dialog = false;
+          this.$emit("projectAdded");
+          Bus.$emit("newProject", new_doc);
         });
       }
     },
