@@ -1,5 +1,5 @@
-Lesson-03
-============
+Lesson-03-Vue
+===================
 
 This section shows the vuejs with vuetify
 

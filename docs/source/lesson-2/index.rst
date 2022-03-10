@@ -1,5 +1,5 @@
-Lesson-02
-============
+Lesson-02-Vuetify
+========================
 
 During this section, we start to learn vuetify components.
 

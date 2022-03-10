@@ -47,6 +47,7 @@
 
 <script>
 import format from "date-fns/format";
+import * as fb_db from "@/fb";
 export default {
   data() {
     return {
@@ -59,7 +60,18 @@ export default {
   methods: {
     submit() {
       if (this.$refs.form.validate()) {
-        console.log(this.title, this.content);
+        const project = {
+          title: this.title,
+          content: this.content,
+          due: format(new Date(this.due), "do MMM yyyy"),
+          person: "Skycoco",
+          status: "ongoing",
+        };
+        const db = fb_db.db;
+        const new_doc = fb_db.doc(db, "projects/aaa");
+        fb_db.setDoc(new_doc, project, { merge: true }).then((res) => {
+          console.log("successful");
+        });
       }
     },
   },
