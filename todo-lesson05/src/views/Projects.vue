@@ -24,50 +24,26 @@
 
 <script>
 // @ is an alias to /src
-
+import * as fb_db from "@/fb";
 export default {
   data() {
     return {
-      projects: [
-        {
-          title: "Design a new website",
-          person: "The Net Ninja",
-          due: "1st Jan 2022",
-          status: "ongoing",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam natus neque ut delectus facere. Repudiandae aliquid ratione asperiores aut ad facilis dolorum, sapiente, doloremque nisi qui eveniet numquam, illum excepturi.",
-        },
-        {
-          title: "Code up the homepage",
-          person: "Skycoco",
-          due: "10th Jan 2022",
-          status: "completed",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta fuga ex odio minus libero praesentium vero quas. Accusamus recusandae voluptates doloremque! Eum non, nam commodi possimus facilis exercitationem distinctio sapiente?",
-        },
-        {
-          title: "Design video thumbnails",
-          person: "Jant",
-          due: "2nd Feb 2022",
-          status: "completed",
-          content:
-            "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic totam qui labore doloribus, error necessitatibus veritatis aut exercitationem fugit deserunt. Quidem, voluptatem nemo. Nulla excepturi doloremque omnis minus in optio.",
-        },
-        {
-          title: "Create a community forum",
-          person: "Bob",
-          due: "20th Jan 2022",
-          status: "overdue",
-          content:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis nulla ratione tempora, eius blanditiis repellat voluptates est aspernatur impedit quo minima enim ullam adipisci vel ducimus. Eaque, officiis obcaecati.",
-        },
-      ],
+      projects: [],
     };
+  },
+  mounted() {
+    const s = fb_db.query(fb_db.collection(fb_db.db, "projects"));
+    fb_db.onSnapshot(s, (docSnapshot) => {
+      this.projects = [];
+      docSnapshot.docs.map((project) =>
+        this.projects.push({ ...project.data(), id: project.id })
+      );
+    });
   },
   computed: {
     myProjects() {
       return this.projects.filter((project) => {
-        return project.person === "The Net Ninja";
+        return project.person === "Skycoco";
       });
     },
   },

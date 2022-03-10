@@ -82,6 +82,7 @@ export default {
   },
   methods: {
     sortBy(prop) {
+      console.log(this.projects[0]);
       this.projects.sort((a, b) => (a[prop] < b[prop] ? -1 : 1));
     },
   },
@@ -93,17 +94,9 @@ export default {
     fb_db.onSnapshot(s, (docSnapshot) => {
       this.projects = [];
       docSnapshot.docs.map((project) =>
-        this.projects.push({ ...project.data() })
+        this.projects.push({ ...project.data(), id: project.id })
       );
     });
-
-    console.log(this.projects);
-
-    // fb_db.query(fb_db.collection(fb_db.db, "projects")).then((res) => {
-    //   fb_db.onSnapshot(res, (docSnapshot) => {
-    //     this.new_projects = docSnapshot.docs;
-    //   });
-    // });
   },
 };
 </script>
