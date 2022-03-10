@@ -14,6 +14,7 @@ Welcome to Vuetify's documentation!
    lesson-2/index
    lesson-3/index
    lesson-4/index
+   contributors
 
 
 Special Thanks to The Net Ninja:
